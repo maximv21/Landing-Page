@@ -1,0 +1,78 @@
+@media screen and (max-width: 1200px) {
+#container {
+		height: 20em}
+
+#pictures {
+		height: 45vw;}
+		#pictures a {
+	
+	width: 31%; 
+	height: 34%;
+
+	}
+}
+@media screen and (max-width: 991px) {
+	#container {
+		height: 18em;
+		}
+	#pictures {
+		height: 100vw;
+			a {
+				width: 45%; 
+				height: 25%;
+
+		}
+	}
+	 
+}
+	
+@media screen and (max-width: 768px) {
+	#container {
+		display: inline;
+	}
+	#select {
+		margin: 2em 0;
+		width: auto;
+		height: auto;
+	}
+	form {
+	width: auto;
+	height: auto;
+	}
+	#pictures {
+		display: inline;
+			img {	
+				height: auto;
+				object-fit: contain;
+		}
+	}
+	.anime .circle {
+		width: 25px;
+		height: 25px;
+	}
+			
+	footer {
+			flex-direction: column;
+	}
+}
+@media screen and (max-width: 600px){
+	#select {
+		flex-direction: column;
+	}
+	#container .select {
+		width: 100%;
+		}
+	#pictures{	
+		display: none;
+		}
+	.anime .circle{
+			width: 15px;
+			height: 15px;
+			}
+		}
+@media screen and (max-width: 420px){
+	.anime .circle{
+			width: 12px;
+			height: 12px;
+		}
+	}

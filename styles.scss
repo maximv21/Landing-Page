@@ -1,0 +1,321 @@
+@import "sass/_colors.scss";
+@import "sass/_reset.scss";
+
+
+
+body {
+  
+  background-color: $page-color; 
+
+ 
+	}
+header {
+	z-index: 1; 
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 4rem;
+	background-color: $header-color;
+	
+	/*burger button styling */
+	  .but {	
+		z-index: 2;
+		position: absolute;
+		left: 3%;
+		top: 50%;
+		transform: translate(0, -50%);
+		transition: left .23s;
+		width: 2em;
+		height: 2em;
+		cursor: pointer;
+		
+			div {
+				position: relative;
+				transition: all .2s linear .23s;
+				width: 25px;
+				height: 5px;
+				margin:  4px;
+				background-color: $burger-color;
+				
+				}
+			}	
+	.menu { 
+		z-index: 1;
+		position: fixed;
+		left: -10em;
+		width: 10em;
+		height: 100%;
+		margin-top: 3em;	
+		transition: left .30s;
+		background-color: $menu-color;
+			ul {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				height: 80%;
+				list-style: none;
+			
+				a {
+				color: black;
+				text-decoration: none;}
+				}}
+   
+  
+	.hide {
+		display: none;
+		&:checked ~ .but .one {
+			transform: rotate(45deg) translate(11px, 8px);
+		}
+		&:checked ~ .but .two{
+			opacity:0
+		}
+		&:checked ~ .but .three{
+			transform: rotate(-45deg) translate(5px, -1px);}
+		&:checked ~ .menu{
+			left: 0;
+		}
+	 }
+	 
+	 
+  }
+ #logo {
+	display: flex;
+	height: 4rem;
+	width: 10rem;
+		}
+h1 {
+	margin-top: 4em;
+	text-align: center;
+	font-size: 22px;
+	}
+#info {
+	max-width: 80%;
+	margin: 0 auto 5em;
+	
+	}
+	
+	/*pictures responsive layout styling*/
+#pictures {
+	display: flex;
+	justify-content: space-between;
+	align-items: space-between;
+	flex-wrap: wrap;
+	height: 40vw;
+	margin-left: 0.5em;	
+		a {
+			width: 32%; 
+			height: 40%;
+			color: white;
+			
+			&:active{
+				text-decoration: none;
+				color: black;
+	}
+
+
+			&:hover .sign{ 
+
+				display: inline;
+				opacity: 1;
+				text-align: center;
+}
+
+			}
+		figure {
+			margin: auto;	
+		}
+		figcaption {
+			width: 100%;
+			height: 3em;
+			background-color: $figcaption-color;
+			font-size: 12px;
+			line-height: 3em;		
+			text-align: center;
+}
+
+			
+		img {	
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+	
+
+}
+			}
+
+.sign {
+	opacity: 0;
+	transition: .5s;
+}
+
+
+	/* Content and form styling */
+#container {
+	display: flex;
+	justify-content: space-around;
+	align-items: space-around;
+	height: 26em;
+	margin-top: 5%;
+		.select * {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+	}
+		.select {
+			display: inline-block;
+			width: 34%;
+			border-style: solid;
+			border-width: 1px;
+				p {
+					font-size: 24px;
+					font-weight: bold;
+					}
+				}
+			
+		
+		ul {
+			padding-left: 0;
+			line-height: 1.7em;
+			font-size: 18px;
+		}
+
+		h3 {
+			height: 2.5em;
+			margin-top: 0;
+			line-height: 2.5em;
+			font-size: 16px; 
+			background-color: $h3-color;
+		}
+		button {
+			background-color: $button-color;
+			}
+			button:focus {
+			background-color: $select-color;
+		}	
+	}
+#select {
+			display: flex;
+			justify-content: space-between;
+			width: 65%;
+			height: auto;
+			border-style: solid;
+	}
+
+form {
+	display: flex;
+	flex-direction: column;
+	jusstify-content: center;
+	align-items: center;
+	width: 25%;
+	margin-bottom: 0;
+	padding: 1.3rem 1.2rem;
+	background-color: $form-color;
+	border-radius: 4px;
+	font-size: 14px;
+		*{
+			width: 100%;
+			border-radius: 4px;
+		}
+		input:nth-child(even){
+			height: 2em;
+			margin: 0.6em auto 1em;
+			padding-left: 0.6em; 
+			font-size: 11px;
+
+			&:focus {
+				background-color: $focus-color;
+				}
+		}
+		textarea {
+			height: 10em;
+			margin-top: 0.6em;
+		}
+
+		input[type="submit"] {
+			height: 3em;
+			margin-top: 2em;
+			border: none;
+			background-color: $button-color;
+			color: white;
+			font-size: 14px;
+			cursor: pointer;
+			}
+		input[type="submit"]
+			&:hover {
+				background-color: $hover-color;
+				}
+		}
+
+
+@import "sass/_mixins.scss";
+	/*animation styling*/
+.anime {
+	 
+	$colors: 
+	$first-circle-color, $second-circle-color,$third-circle-color,$fourth-circle-color,
+	$fifth-circle-color,$sixth-circle-color,$seventh-circle-color,$eights-circle-color,
+	$nineths-circle-color,$tens-circle-color;
+	
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	animation-delay: 1s;
+
+		.circle {
+			position: relative;
+			width: 50px;
+			height: 50px;
+			margin: 0.8em;
+			border-radius: 50%;
+
+    &::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			border-radius: inherit;
+			animation: run 2s linear infinite;
+		}
+			@include animationLoop($colors, 10)
+	
+       
+      
+    }
+  }
+
+
+@keyframes run {25%, 50% {
+		transform: scale(1.5);
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+
+
+footer {
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $footer-color;
+	color: white;
+		* {
+			color: white;}
+		li {
+			display: inline-block;
+			margin-left: 2em;
+		}
+	a {
+		text-decoration: none;
+		}
+	}
+
+@import "sass/_media.scss"
+
+/*# sourceMappingURL=styles.css.map */
+	

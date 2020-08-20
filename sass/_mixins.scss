@@ -1,0 +1,10 @@
+@mixin animationLoop($colors, $times){
+@for $i from 1 through 10 {
+				&:nth-child(#{$i}) {
+					background: nth($colors, $i);
+
+					&::before {
+					animation-delay: $i * 0.2s;
+        }
+      }
+    }}
